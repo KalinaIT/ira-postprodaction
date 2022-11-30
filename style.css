@@ -14,32 +14,21 @@ font-family: 'Sigmar One', cursive; */
 
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
-
 nav,footer,header,aside{display: block;}
-
-html,body{
-	height: 100%;
-	
-}
 input,button,textarea{font-family:inherit;}
-
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
+a, a:visited{
+  text-decoration: none;
+  color: inherit;
+}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
-
-
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
@@ -99,7 +88,63 @@ main{
 .header {}
 .header__container {
   display: flex;
+  text-transform: uppercase;
+  margin: 60px 40px;
+  justify-content:space-between;
+  align-items: center;
 }
-.header__title {}
+.header__title h1{
+  font-family: 'Sigmar One', cursive;
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.header__title span{
+  font-weight: 600;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding:2px 5px;
+
+}
 .nav {}
-.nav__menu {}
+.nav__menu a{
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.flex-galery-container{
+  display: flex;
+  justify-content: flex-start;
+}
+.__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.__column img{
+margin: 10px;
+}
+/* My links */
+.links-container{
+  padding-top:30px;
+  display: flex;
+  justify-content: center;
+}
+.links-container__item{
+  display: inline-flex;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.links-container_text{
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 20px 60px;
+}
