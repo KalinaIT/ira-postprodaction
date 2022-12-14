@@ -26,29 +26,17 @@
          </div>
          <nav class="nav">
             <div class="nav__menu">
-               <a href="#">Portfolio</a>
-               <a href="#">About</a>
-               <a href="#">My links</a>
-               <a href="#">Contact</a>
-            </div>
+               <ul class="nav__menu-container">
+                  <li><a href="">Portfolio</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">My links</a></li>
+                  <li><a href="">Contact</a></li>
+               </ul>
          </nav>
       </div>
    </header>
    <main>
       <div class="flex-galery-container">
-         <div class="flex-container __column">
-            <img id="myImg"  src="pexels-ali-pazani-2625122.jpg" alt="">
-            <div id="myModal" class="modal">
-
-               <!-- The Close Button -->
-               <span class="close">&times;</span>
-             
-               <!-- Modal Content (The Image) -->
-               <img class="modal-content" id="img01">
-             
-               <!-- Modal Caption (Image Text) -->
-               <div id="caption"></div>
-             </div>
             <img id="myImg" src="img/photo_1.jpg" alt="">
             <img id="myImg" src="img/photo_2.jpg" alt="">
             <img id="myImg" src="img/photo_3.jpg" alt="">
@@ -88,11 +76,17 @@
             <img id="myImg" src="img/photo_37.jpg" alt="">
             <img id="myImg" src="img/photo_38.jpg" alt="">
             <img id="myImg" src="img/photo_39.jpg" alt="">
-            
-           
          </div>
-        
-      </div>
+   
+            <div id="myModal" class="modal">
+               <!-- The Close Button -->
+               <span class="close">&times;</span>
+               <!-- Modal Content (The Image) -->
+               <img class="modal-content" id="img01">
+               <!-- Modal Caption (Image Text) -->
+               <div id="caption"></div>
+             </div>
+   
    </main>
    <footer>
       © 2022 Iryna Dubova. All rights reserved.
