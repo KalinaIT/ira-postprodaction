@@ -1,6 +1,5 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Sigmar One', cursive; */
-
 *,
 *::before,
 *::after {
@@ -12,24 +11,32 @@ font-family: 'Sigmar One', cursive; */
 }
 
 :focus,:active{outline: none;}
+
 a:focus,a:active{outline: none;}
+
 nav,footer,header,aside{display: block;}
+
 input,button,textarea{font-family:inherit;}
+
 input::-ms-clear{display: none;}
+
 button{cursor: pointer;}
+
 button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{
+
+a,:visited{
   text-decoration: none;
   color: inherit;
 }
-a:hover{text-decoration: none;}
+
+:hover{text-decoration: none;}
+
 ul li{list-style: none;}
+
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-/*--------------------*/
 
-/* Выставляем основные настройки по-умолчанию для body */
 body {
   height: 100vh;
   scroll-behavior: smooth;
@@ -44,29 +51,24 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
   margin-top: 1em;
 }
 
-/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -86,7 +88,7 @@ main{
 /*header style */ 
 .container {}
 .header {}
-.header__container {
+.header {
   display: flex;
   text-transform: uppercase;
   margin: 60px 40px;
@@ -108,51 +110,35 @@ main{
 
 }
 .nav {}
+.nav__menu-list{
+  display: flex;
+}
 .nav__menu a{
   padding: 10px;
   margin-right: 10px;
   font-size: 16px;
   font-weight: 600;
-  
 }
-.nav__menu-container a:hover{
+.nav__menu-list a:hover{
   padding-bottom: 10px ;
-  border-radius: 10px;
-  outline: solid 2px black;
+  border-bottom: solid 2px rgb(90, 85, 85);
+  color: rgb(90, 85, 85);
 }
-/* flex photo gallery */
-.flex-galery-container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-}
-.__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 32.5%;
-  align-items: center;
-}
-.flex-galery-container img{
-width: 100%;
-padding-bottom: 15px;
-}
-/* .flex-galery-container{
+
+.grid-galery-container{
   display: inline-grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   align-items: end;
   gap: 30px 30px;
   position: relative;
   
 }
 
-.flex-galery-container img {
+.grid-galery-container img {
   width: 100%;
   height: fit-content;
   
-} */
+}
 
 
 /* My links */
@@ -178,25 +164,25 @@ padding-bottom: 15px;
 }
 
 
-#myImg {
+.myImg {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
+.myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 20px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
@@ -205,7 +191,7 @@ padding-bottom: 15px;
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
   max-width: 700px;
 }
 
@@ -255,4 +241,77 @@ padding-bottom: 15px;
   .modal-content {
     width: 100%;
   }
+}
+
+/* before/after slider */
+.slider{
+  max-width: 600px;
+  margin: 0 auto;
+}
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+
+/*About*/
+.about {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.about__person {
+  display: flex;
+  padding: 40px;
+  align-items: center;  
+}
+.about__img {
+  align-self: start;
+  background: url('img/about__persom.jpg') 50%/cover no-repeat;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 7px 6px black;
+  margin-right: 40px;;
+
+}
+.about__info {
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  
+}
+.about__info h2{
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing:1px;
+}
+.about__text {}
+.about__publish {
+  display: flex;
+  flex-direction: column;
+}
+.about__published {
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 25px;
+}
+.about__magazines {}
+.magazines {
+  display: flex;
+  font-size: 40px;
+
+}
+.magazines__item {
+  max-width: 200px;
+  margin-right: 30px;
+  color: rgba(11, 10, 10, 0.404) ;
+  font-style: italic;
+
+}
+.magazines__item {
+  display:block;
 }

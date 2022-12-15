@@ -6,8 +6,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Sigmar+One&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sigmar+One&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="sliderJs/BeerSlider.css">
    <title>Document</title>
 </head>
 <body>
@@ -36,29 +37,13 @@
       
    </header>
    <main>
-      <div class="about">
-         <div class="about__person">
-            <div class="about__img"></div>
-            <div class="about__info">
-               <h2>Zhitomir, Ukraine</h2>
-               <p class="about__text">
-                  Professional commercial retoucher <br>
-                  Beauty | Lookbook | Fashion <br>
-                  Focus on natural and quality🌿 <br>
-                  Ukraine🌾
-               </p>
-               <div class="about__publish">
-                  <p class="about__published"> PUBLISHED IN</p>
-                  <div class="about__magazines magazines">
-                     <a href="https://flanellemag.com/" class="magazines__item">Flanelle</a>
-                     <a href="https://www.malvie.fr/" class="magazines__item">Malvie</a>
-                     <a href="" class="magazines__item"></a>
-                     <a href="" class="magazines__item"></a>
-                  </div>
-               </div>
+      <div class="slider">
+         <div id="beer-slider" class="beer-slider" data-beer-label="before">
+            <img src="img/photo_1.jpg" alt="Original - Man holding beer">
+            <div class="beer-reveal" data-beer-label="after">
+            <img src="img/photo_1.jpg" alt="Processed - Man holding beer">
             </div>
          </div>
-         
       </div>
    </main>
    <footer>
